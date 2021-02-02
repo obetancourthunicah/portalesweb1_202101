@@ -7,12 +7,24 @@
 </head>
 
 <body>
-    <h1>Manejo de Audio en HTML 5</h1>
-    <audio autoplay="true" controls loop="true">
+    <h1>Manejo de Audio y Video en HTML 5</h1>
+    <h2>Audio</h2>
+    <audio controls loop="false">
       <source src="assets/guitar_house__josh_pan.ogg" type="audio/ogg" />
       <source src="assets/guitar_house__josh_pan.mp3" type="audio/mpeg" />
       Tu navegador no soporta audio.
     </audio>
+
+    <h2>Video</h2>
+    <video controls>
+      <source src="assets/movie.ogg" type="video/ogg" />
+      <source src="assets/movie.mp4" type="video/mp4" />
+      Tu navegador no soporta video. 
+    </video>
+
+    <h2>Incorporando Videos de Video Provider (iframe)</h2>
+    <p>iframe es una etique que permite renderizar el contenido de otro sitio embedido dentro de la página web</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/c5hruj74MU4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </body>
 
 </html>
