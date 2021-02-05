@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Uso de Tablas</title>
+    <meta charset="utf-8" />
+</head>
+<style>
+  table
+  {
+    width:100%;
+  }
+
+</style>
+<body>
+    <h1>Uso adecuado de las Tablas</h1>
+    <p>Tablas se usan exclusivamente para representar datos tabulares</p>
+
+    <!-- Layout :->  Disposición y Diseño Visual de los elementos de la página -->
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Código</th>
+                <!-- table heading-->
+                <th>Nombre</th>
+                <!-- table heading-->
+                <th>Precio</th>
+                <!-- table heading-->
+                <th>Impuesto</th>
+                <!-- table heading-->
+                <th>Estado</th>
+                <!-- table heading-->
+            </tr>
+            <!-- tr table row-->
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <!-- td: table data cell -->
+                <td>Panadol</td>
+                <td>100</td>
+                <td>15%</td>
+                <td>Activo</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <!-- td: table data cell -->
+                <td>Panadol</td>
+                <td>100</td>
+                <td>15%</td>
+                <td>Activo</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <!-- td: table data cell -->
+                <td>Panadol</td>
+                <td>100</td>
+                <td>15%</td>
+                <td>Activo</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <!-- td: table data cell -->
+                <td>Panadol</td>
+                <td>100</td>
+                <td>15%</td>
+                <td>Activo</td>
+            </tr>
+        </tbody>
+        <tfoot>
+
+        </tfoot>
+    </table>
+
+    <h2>Tablas mas complejas</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th colspan="8">Datos de Ventas por Región y Periodos (Miles)</th>
+            </tr>
+            <tr>
+                <th>Región</th>
+                <th>Ciudad</th>
+                <th>Q1</th>
+                <th>Q2</th>
+                <th>Q3</th>
+                <th>Q4</th>
+                <th>AVG</th>
+                <th>Tot Región</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="3">Norte</td>
+                <td>La Ceiba</td>
+                <td>5</td>
+                <td>4</td>
+                <td>6</td>
+                <td>2</td>
+                <td>4.5</td>
+                <td rowspan="3">20</td>
+            </tr>
+            <tr>
+                
+                <td>San Pedro Sula</td>
+                <td>8</td>
+                <td>7</td>
+                <td>8</td>
+                <td>10</td>
+                <td>8.75</td>
+            </tr>
+            <tr>
+                
+                <td>Gualala</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Sur</td>
+                <td>Choluteca</td>
+                <td>5</td>
+                <td>6</td>
+                <td>3</td>
+                <td>9</td>
+                <td>8</td>
+                <td rowspan="2">17</td>
+            </tr>
+            <tr>
+                
+                <td>Nacaome</td>
+                <td>5</td>
+                <td>5</td>
+                <td>4</td>
+                <td>5</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Centro</td>
+                <td>Tegucigalpa</td>
+                <td>15</td>
+                <td>15</td>
+                <td>14</td>
+                <td>15</td>
+                <td>15</td>
+                <td rowspan="2">24</td>
+            </tr>
+            <tr>
+                
+                <td>Comayagua</td>
+                <td>7</td>
+                <td>6</td>
+                <td>5</td>
+                <td>6</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Occidente</td>
+                <td>La Entrada</td>
+                <td>4</td>
+                <td>4</td>
+                <td>4</td>
+                <td>4</td>
+                <td>4</td>
+                <td rowspan="2">6</td>
+            </tr>
+            <tr>
+                
+                <td>Santa Rosa de Copán</td>
+                <td>6</td>
+                <td>5</td>
+                <td>4</td>
+                <td>6</td>
+                <td>5</td>
+            </tr>
+        </tbody>
+        <tfoot>
+          <td colspan="8">Datos del Infome Financiero 2021 </td>
+        </tfoot>
+    </table>
+    <script>
+      document.addEventListener("DOMContentLoaded", function(){
+        var tableHeads = document.getElementsByTagName("thead");
+        for (var i = 0 ; i< tableHeads.length; i++){
+          htmlEl = tableHeads[i];
+          htmlEl.addEventListener('click', function(e){
+            e.preventDefault();
+            e.stopPropagation();
+            alert("Click en Encabezado");
+          })
+        }
+      });
+      </script>
+</body>
+
+</html>
