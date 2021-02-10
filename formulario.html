@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Formularios en HTML</title>
+</head>
+
+<body>
+    <header>
+        <h1>Formularios</h1>
+    </header>
+    <main>
+        <form action="formulario.html" method="POST">
+            <fieldset>
+                <legend>Datos Generales</legend>
+                <label for="txtNombre">Nombre Completo</label>
+                <input id="txtNombre" name="txtNombre" type="text" placeholder="Tu Nombre Completo" />
+                <br/>
+                <label for="txtEmail">Correo Electrónico</label>
+                <input id="txtEmail" name="txtEmail" type="email" placeholder="tucorre@electro.nico" />
+                <br/>
+                <label for="txtPhone">Teléfono</label>
+                <input id="txtPhone" name="txtPhone" type="tel" placeholder="+(504)dddd-dddd" />
+                <br/>
+            </fieldset>
+            <fieldset>
+                <legend>Preferencias</legend>
+                <label>Colores:&nbsp;</label>
+                <input type="radio" id="opcColorRed" value="RED" checked name="opcColor" />
+                <label for="opcColorRed">Rojo</label> &nbsp;
+                <input type="radio" id="opcColorBlue" value="BLUE" name="opcColor" />
+                <label for="opcColorBlue">Azul</label>
+                <br/>
+                <label>Intereses</label>
+                <input type="checkbox" name="optDeportes" id="optDeportes" />
+                <label for="optDeportes">Deportes</label> &nbsp;
+                <input type="checkbox" name="optMusica" id="optMusica" />
+                <label for="optMusica">Música</label> &nbsp;
+                <input type="checkbox" name="optLiteratura" id="optLiteratura" />
+                <label for="optLiteratura">Literatura</label> &nbsp;
+            </fieldset>
+
+            <fieldset>
+                <legend>Demografía</legend>
+                <label for="cmbPaises">País</label>
+                <select id="cmbPaises" name="cmbPaises">
+                <option value="*">Seleccione un País</option>
+                <option value="HND">Honduras</option>
+                <option value="JPN">Japón</option>
+                <option value="CND">Canadá</option>
+                <option value="GRM">Alemania</option>
+              </select>
+            </fieldset>
+            <fieldset>
+              <legend>Bio</legend>
+              <textarea name="txtTextoLargo" cols="80" rows="15" placeholder="No hay texto"></textarea>
+            </fieldset>
+            <button type="submit" name="btnEnviar" value="ok">Enviar</button>
+        </form>
+    </main>
+</body>
+
+</html>
