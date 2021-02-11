@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usando CSS con HTML</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <style>
+      code {
+        padding:0.1rem 0.8rem;
+        background-color:#ddd;
+        color:#222;
+      }
+      p {
+        line-height: 1.5;
+      }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Usando CSS en HTML</h1>
+    </header>
+    <main>
+        <h2>CSS como Atributo style dentro del nodo <em>NO USAR</em></h2>
+        <p>
+            Cada elemento html puede lleva atributos en la etiqueta de apertura. El atributo es <strong>style</strong>
+            <br/>
+            <code>style="regla:valor;regla:valor;..."</code>
+        </p>
+        <p style="color:#FF0;background-color:blue">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores vel magnam voluptatibus! Aspernatur provident tempora voluptates animi! Dolorem quasi a voluptatum distinctio eveniet. Fugiat tenetur nesciunt alias eaque? Saepe, tempora?
+        </p>
+        <h2>CSS como bloque de Estilos en el Documento</h2>
+        <p>
+            Se utiliza el elemento style declarado dentro del <code>head</code> o el <code>body</code>, y se establece la sintaxis de selectores y bloques de reglas.
+        </p>
+        <pre>
+  &lt;style&gt;
+    selector: {
+      regla: valor;
+    }
+  &lt;\style&gt;
+</pre>
+        <h2>CSS como archivo externo ligado</h2>
+        <p>Cuando son reglas para aplicar a todo un sitio</p>
+      <pre>
+&lt;link rel="stylesheet" href="css/style.css" /&gt;
+        </pre>
+    </main>
+    <footer></footer>
+</body>
+
+</html>
