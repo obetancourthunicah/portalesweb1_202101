@@ -16,6 +16,7 @@ header{
 header h1{
   font-weight: bolder;
   margin:0px 2rem; /*rem: root EM, EM: width of M o Font*/ 
+  padding:1rem;
 }
 header nav ul {
   list-style:none;
@@ -36,3 +37,52 @@ header nav ul li a:hover{
   background-color: #1c565f;
   transition: background-color 1s ease;
 }
+/*
+main img{
+  animation: 1s round infinite;
+}
+*/
+@media (min-width: 600px){
+
+  header{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    /*
+    position:relative;
+    background-color:#916300;
+    */
+  }
+  header nav {
+    /*
+    bottom:0px; 
+    */
+    /*top left right bottom*/
+    /* 
+    right:0px;
+    position:absolute;
+    */
+  }
+  header nav ul {
+    display:flex;
+    padding:0px 1rem;
+  }
+  header nav ul li {
+    /*display:inline-block;
+    */
+  }
+  header nav ul li a{
+    border-bottom:none;
+    padding:1rem 1.5rem;
+  }
+
+}
+
+/*
+@keyframes round {
+  25% {transform:rotate(45deg) scale(1) }
+  50% {transform:rotate(135deg) }
+  75% {transform:rotate(90deg) scale(4)}
+  100% {transform:rotate(0deg)}
+}
+*/
