@@ -42,6 +42,47 @@ main img{
   animation: 1s round infinite;
 }
 */
+main {
+  padding:1rem;
+  /*
+    rem em % pt vh vw /->  unidades de medidas relativas
+    rem = relativo al tamaño de la letra m del inicio de la página  16px
+              body            font-size: 1rem;    16px  --> standard --;
+              body header     font-size: 2rem;    32px
+              body header h1  font-size: 0.8em;   25.36px
+              body header h1  font-size: 0.8rem;  12.8px
+
+    vh --> viewport height 0 - 100
+    vw --> viewport width 0 - 100
+    %  --> 0 - 100 document o contenedor
+
+    em = relativo al tamaño de la letra m del contexto del tamaño del contendor
+
+    px
+  */
+}
+
+.heropanel{
+  position:relative;
+  color:#333;
+}
+
+.heropanel img{
+  width: 100vw;
+  margin-left:-1rem;
+}
+
+.heropanel h1{
+  position: absolute;
+  top:20%;
+  text-align: center;
+  width:100%;
+  font-size: 4rem;
+  text-shadow: 0.1rem 0.1rem 0.15rem #f00;
+}
+
+
+
 @media (min-width: 600px){
 
   header{
@@ -76,6 +117,22 @@ main img{
     padding:1rem 1.5rem;
   }
 
+}
+
+
+@media (min-width:1025px){
+
+
+}
+
+@media (min-width:1200px){
+  main{
+    max-width: 1200px;
+    margin:1rem auto;
+  }
+  .heropanel img{
+    max-width: 1200px;
+  }
 }
 
 /*
