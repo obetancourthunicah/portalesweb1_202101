@@ -11,6 +11,9 @@ body{
 }
 
 header{
+  position:sticky;
+  top:0px;
+  z-index:9999;
   background-color:#058093;
 }
 header h1{
@@ -44,7 +47,7 @@ main img{
 }
 */
 main {
-  padding:1rem;
+  padding:0rem 1rem;
   /*
     rem em % pt vh vw /->  unidades de medidas relativas
     rem = relativo al tamaño de la letra m del inicio de la página  16px
