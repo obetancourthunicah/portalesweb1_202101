@@ -8,6 +8,28 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/components.css" />
+    <style>
+        table.zebra tbody tr td:nth-child(5) {
+            text-align: center;
+        }
+        
+        table.zebra tbody tr td:nth-child(4) {
+            display: none;
+        }
+        
+        table.zebra thead tr th:nth-child(4) {
+            display: none;
+        }
+        
+        @media (min-width:600px) {
+            table.zebra tbody tr td:nth-child(4) {
+                display: table-cell;
+            }
+            table.zebra thead tr th:nth-child(4) {
+                display: table-cell;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -85,6 +107,102 @@
                 <form>
                     <button>Suscribir abcdeaj adfasf</button>
                 </form>
+            </section>
+        </section>
+        <section>
+            <h2>Informes</h2>
+            <section class="table-container">
+                <table class="table-full zebra">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Código</th>
+                            <th>Categoría</th>
+                            <th>Estado</th>
+                            <th>Productos</th>
+                            <th>+</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>NAC</td>
+                            <td>Nacionales</td>
+                            <td>Activo</td>
+                            <td>100</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>INT</td>
+                            <td>Internacionales</td>
+                            <td>Activo</td>
+                            <td>300</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>LCN</td>
+                            <td>Leche Nacional</td>
+                            <td>Activo</td>
+                            <td>20</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>LCI</td>
+                            <td>Leches Internacionales</td>
+                            <td>Activo</td>
+                            <td>40</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>CNT</td>
+                            <td>Controlados</td>
+                            <td>Activo</td>
+                            <td>50</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </section>
+        <section class="CardHolder-Horizontal">
+            <section class="CardHolder">
+                <section class="Card">
+                    <h3>
+                        Plan Free
+                    </h3>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <form>
+                        <button>Suscribir</button>
+                    </form>
+                </section>
+                <section class="Card">
+                    <h3>
+                        Plan 16$ Mensual
+                    </h3>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <form>
+                        <button>Suscribir</button>
+                    </form>
+                </section>
+                <section class="Card">
+                    <h3>
+                        Plan 50% Mensual
+                    </h3>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <form>
+                        <button>Suscribir abcdeaj adfasf</button>
+                    </form>
+                </section>
             </section>
         </section>
     </main>

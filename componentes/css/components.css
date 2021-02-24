@@ -54,6 +54,33 @@ main img{
   padding:1rem 0px;
 
 }
+.CardHolder-Horizontal{
+  width:calc(100%+2rem);
+  overflow-x: scroll;
+  padding:1rem 0px;
+  position: relative;
+}
+/*
+.CardHolder-Horizontal .CardHolder::before{
+ float: left;
+ content: "<";
+ top:50%;
+ left:0px;
+}
+
+.CardHolder-Horizontal .CardHolder::after{
+ content: ">";
+ float:right;
+ top:50%;
+ right:0px;
+}
+*/
+.CardHolder-Horizontal .CardHolder{
+  width:max-content;
+  min-width: calc(100%+2rem);
+  margin-left: -1rem;
+  display: flex;
+}
 .Card{
   background-color: #fff;
   padding: 1rem;
@@ -89,6 +116,13 @@ main img{
    box-shadow: 1px 1px 5px #046371;
 }
 
+.CardHolder-Horizontal .Card{
+  margin-left: 1rem;
+  margin-top: 0px;
+}
+.CardHolder-Horizontal .Card:nth-last-child(){
+  margin-right: 1rem;
+}
 
 main {
   padding:0rem 1rem;
@@ -115,7 +149,7 @@ main {
 }
 
 .heropanel{
-  width:100vw;
+  width:calc(100% + 2rem);
   margin-left: -1rem;
   position:relative;
   color:#333;
@@ -124,10 +158,11 @@ main {
 }
 
 .heropanel img{
+  display: block;
   width: 100%;
   margin:0px;
   padding:0px;
-
+  border: none;
 }
 
 .heropanel h1{
@@ -150,6 +185,37 @@ main p {
   line-height: 2;
   text-shadow: 1px 1px 1px #333; /* Desplazamiento e X, Desplazamiento en Y, Tamaño del Difuninado */
 }
+
+.table-container {
+  width:100%;
+  overflow-x: scroll;
+}
+
+table.table-full {
+  width:100%;
+  min-width: 640px;
+  -webkit-border-horizontal-spacing:0px;
+  -webkit-border-vertical-spacing:0px;
+}
+table.table-full thead {
+  background-color: #046371;
+ 
+}
+
+table.table-full thead th{
+  padding:0.5rem 1rem;
+  color:#fff;
+}
+
+table.table-full tbody td{
+  padding:0.5rem 1rem;
+}
+
+table.zebra tbody tr:nth-child(2n){
+  background-color: #b5b5b5;
+}
+
+
 
 @media (min-width: 600px){
 
@@ -190,6 +256,7 @@ main p {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 }
 
