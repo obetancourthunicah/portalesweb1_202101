@@ -1,6 +1,14 @@
 *, *::after, *::before{
   box-sizing: border-box;
 }
+/*
+html[theme='dark-mode'] {
+   filter: invert(1) hue-rotate(180deg);
+   filter: invert(1) hue-rotate(180deg);
+}
+*/
+
+
 body{
   background-color:#222;
   color:#eee;
@@ -113,7 +121,18 @@ main img{
   font-weight: 700;
   color: #fff;
   border-radius: 27px;
-   box-shadow: 1px 1px 5px #046371;
+  box-shadow: 1px 1px 5px #046371;
+  transition: background-color 0.5s ease, box-shadow 0.2s linear;
+  cursor: pointer;
+  
+}
+
+.Card form button:hover{
+  border: 2px #046371 solid;
+  background-color: #035460;
+  box-shadow: 2px 2px 10px #00333b;
+  transition: background-color 0.5s ease, box-shadow 0.2s linear;
+  animation: CardBtnAnimation 0.5s ease-in-out;
 }
 
 .CardHolder-Horizontal .Card{
@@ -122,6 +141,16 @@ main img{
 }
 .CardHolder-Horizontal .Card:nth-last-child(){
   margin-right: 1rem;
+}
+
+.CardHolder-Horizontal:is
+
+@keyframes CardBtnAnimation {
+  0%  {transform: translateY(0rem);}
+  20% {transform: translateY(0.3rem);}
+  30% {transform: translateY(-0.5rem);}
+  60% {transform: translateY(0.3rem);}
+  70% {transform: translateY(-0.5rem);}
 }
 
 main {
@@ -284,3 +313,9 @@ table.zebra tbody tr:nth-child(2n){
   100% {transform:rotate(0deg)}
 }
 */
+
+@media (prefers-color-scheme: dark) {
+  html{
+    filter: invert(1) hue-rotate(180deg);
+  }
+}
