@@ -1,0 +1,64 @@
+* {
+  box-sizing:border-box;
+}
+
+body{
+  padding:0px;
+  margin:0px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 100%;
+  font-size: 16px;
+  font-size: 1em;
+}
+
+
+header{
+
+}
+header h1{
+  margin:0px 0px;
+  padding:0.5rem 1.5rem;
+}
+
+main{
+  padding: 1em;
+  margin:0px auto;
+ /*  max-width:1200px; */
+  min-height: calc(100vh - 105px);
+}
+
+main section{
+  display:flex;
+  padding:1em;
+  box-shadow: 0px 3px 5px #333;
+  width:100%;
+  min-height: 40vh;
+}
+
+.darkbg{
+  background-color: #333;
+  background-image: url("../imgs/bglondon.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:center center;
+  color:#fff;
+}
+
+
+footer{
+  padding:1em;
+  background-color: #333;
+  color:#fff;
+  text-align: center;
+}
+
+@media (min-width:720px){
+  .invert p:nth-child(2){
+    order:1
+  }
+  .invert p:nth-child(1){
+    order:2
+  }
+}
+
+/* font-family: 'Hachi Maru Pop', cursive; */
