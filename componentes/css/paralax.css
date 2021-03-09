@@ -21,20 +21,21 @@ header h1{
 }
 
 main{
-  padding: 1em;
   margin:0px auto;
-  max-width:1200px;
   min-height: calc(100vh - 105px);
 }
 
 main section{
   display:flex;
+  flex-wrap: wrap;
   padding:1em;
+  max-width:1200px;
  /* box-shadow: 0px 3px 5px #333; */
   width:100%;
   min-height: 40vh;
-  margin-bottom: 1rem;
-   align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
 }
 main section p{
   flex:4;
@@ -79,6 +80,11 @@ footer{
 }
 
 @media (min-width:720px){
+  .invert{
+    max-width: 100%;
+    padding-left: calc(50vw - 600px);
+    padding-right: calc(50vw - 600px);
+  }
   .invert p:nth-child(2){
     order:1
   }
