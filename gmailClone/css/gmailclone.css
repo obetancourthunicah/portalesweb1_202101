@@ -1,7 +1,9 @@
 * {
   box-sizing: border-box;
 }
-
+.bold {
+  font-weight: 700;
+}
 body{
   font-family: 'Lato', Arial, sans-serif;
   font-size:100%;
@@ -24,6 +26,7 @@ header h1{
 header nav ul{
   padding:0.25rem;
   margin:0px;
+  margin-right: 1rem;
 }
 header nav li{
   padding:0px;
@@ -52,8 +55,8 @@ header nav li img {
 .hamburguerMenu div{
   background-color: #333;
   border-radius: 5px;
-  width: 70%;
-  min-height: 7px;
+  width: 60%;
+  min-height: 5px;
   margin:3px;
 }
 
@@ -75,7 +78,60 @@ footer{
   text-align: center;
 }
 
-
+.main {
+  align-self: flex-start;
+  overflow-y:scroll;
+}
 .mailItem{
-  box-shadow: 0px 3px 3px #333;
+  box-shadow: 0px 1px 3px #333;
+  margin:0px;
+  padding:0.75em 0.5em !important;
+  width:calc(100% + 2rem)!important;
+  min-height: 4.4375rem;
+}
+
+.mailItem:hover{
+  background-color: #DDD;
+}
+.mailItem:first-child{
+  margin-top:1rem;
+}
+
+.mailItem form{
+  display:inline-flex;
+}
+
+.mailItem .actionstext{
+  text-align: center;
+}
+
+.mailItem:hover .actionstext{
+  display: none;
+}
+
+.mailItem .actions{
+  display: none;
+  text-align: center;
+}
+
+
+.mailItem:hover .actions{
+  display: inline-flex;
+}
+
+.mailItem .actions span{
+  display: inline-flex;
+  font-size: 1.5rem;
+  margin-left:0.25rem;
+  cursor: pointer;
+  box-shadow: 1px 1px 3px #333;
+  width:1.9125rem;
+  height: 1.9125rem;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.mailItem .actions span:hover{
+  background-color: #EEE;
 }
