@@ -26,8 +26,9 @@ header{
 }
 header h1{
   font-weight: bolder;
-  margin:0px 2rem; /*rem: root EM, EM: width of M o Font*/ 
+  margin:0px 2rem; /*rem: root EM, EM: width of M o Font*/
   padding:1rem;
+  margin-left: 100px;
 }
 header nav ul {
   list-style:none;
@@ -45,10 +46,42 @@ header nav ul li a{
   transition: background-color 1s ease;
 }
 
+.hamburguerMenu {
+  position:absolute;
+  top:1rem;
+  margin-left:1rem;
+  display:flex;
+  width: 64px;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hamburguerMenu div{
+  background-color: #333;
+  border-radius: 5px;
+  width: 60%;
+  min-height: 5px;
+  margin:3px;
+}
+
 header nav ul li a:hover{
   background-color: #1c565f;
   transition: background-color 1s ease;
 }
+
+#menu{
+  overflow:hidden;
+  max-height: 100vh;
+  transition: max-height 0.5s linear;
+}
+#menu.hidden{
+  max-height:0px;
+  transition: max-height 0.5s linear;
+}
+
+
+
 /*
 main img{
   animation: 1s round infinite;
@@ -270,6 +303,12 @@ table.zebra tbody tr:nth-child(2n){
   header nav ul {
     display:flex;
     padding:0px 1rem;
+  }
+  #menu.hidden{
+    max-height: max-content;
+  }
+  #hmbbtn{
+    display: none;
   }
   header nav ul li {
     /*display:inline-block;

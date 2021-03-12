@@ -89,6 +89,70 @@ if (bEdad){
   }
 } // Pesimo analisis y diseño del algoritmo
 
+
+//Ciclos en javascript 
+
+for ( var i = 0 ; i < 100; i++){
+  // ¿Cuantas iteraciones?
+}
+
+var i = 0;
+while ( i < 100) {
+  // ¿cuantas iteraciones?
+  i++;
+}
+
+var i=0;
+do {
+  // iteraciones
+  i++;
+} while ( i > 100);
+
+var mensaje = "Hola";
+function saludar(mensaje){
+  mensaje = "Adios";
+  console.log(mensaje);
+}
+
+console.log(mensaje);// Hola
+
+saludar(mensaje); // Adios
+
+console.log(mensaje); //Hola
+
+
+// Programacion sin IO (Input Output -> Bloqueo)
+
+/*
+
+  boolean function getValue( handler ){
+    sleep(50000);
+    if (hayerror){
+      handler(err, null);
+    }
+    handler(false);
+  }
+
+  integer value = 10;
+  boolean value2 = getValue(
+    function (err,  returnValue ) {
+      if (err)
+      {}
+      print( "Hola Mundo " + returnValue);
+    }
+  );
+try{}catch(e)={}
+  throw exception()
+
+
+
+ */
+
+/*
+Ninguna
+1) Solo una <----
+Infinito
+ */
 // Versiones de Javascript
 
 // ES5 ES6 ES7
