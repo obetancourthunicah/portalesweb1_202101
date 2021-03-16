@@ -39,7 +39,9 @@
       outline-color: var(--e_i);
     }
 
-   
+    .hidden{
+      display:none;
+    }
     button{
       display: block;
       box-sizing:border-box;
@@ -66,18 +68,18 @@
 </head>
 <body>
   <header >
-    <h1>Iniciar</h1>
+    <h1 contenteditable>Iniciar</h1>
   </header>
   <main class="container-xl ">
-    <form action="login.html " method="POST " class="grid depth-1 ">
+    <form action="login.html " method="POST " class="grid depth-1 " id="formLogin">
       <div class="col-12 col-m-6 offset-m-3 grid ">
         <label for="txtEmail " class="col-12 ">Correo Electrónico</label>
-        <input class="col-12 error" type="email " name="txtEmail " id="txtEmail " placeholder="Correo Electrónico " />
-        <section  class="col-12 error ">Debe ingresar un correo electrónico válido</section>
+        <input class="col-12" type="email " name="txtEmail " id="txtEmail" placeholder="Correo Electrónico " />
+        <section  class="col-12 error hidden" id="txtEmailError"></section>
       </div>
       <div class="col-12 col-m-6 offset-m-3 grid ">
         <label for="txtPassword " class="col-12 ">Contraseña</label>
-        <input class="col-12 "  type="password " name="txtPassword " id="txtPassword " placeholder="Contraseña " />
+        <input class="col-12 "  type="password " name="txtPassword " id="txtPassword" placeholder="Contraseña " />
       </div>
        <div class="col-12 col-m-6 offset-m-3 grid ">
         <label for="txtModulo " class="col-12 ">Módulo</label>
@@ -98,5 +100,6 @@
   <footer class="align-center-center ">
     <section>Derechos Reservados</section>
   </footer>
+  <script src="js/validateform.js"></script>
 </body>
 </html>
