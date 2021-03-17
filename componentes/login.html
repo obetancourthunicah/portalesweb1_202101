@@ -1,105 +1,125 @@
 <!DOCTYPE html>
-<html ">
+<html>
+
 <head>
-  <meta charset="utf-8 ">
-   <meta name="viewport " content="width=device-width, initial-scale=1.0 ">
-   <link rel="preconnect " href="https://fonts.gstatic.com "> 
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap " rel="stylesheet ">
-   <link rel="stylesheet " href="css/grid.css " />
-  <title>Login Page</title>
-  <style>
-    body{
-      font-family: 'Lato', Arial, sans-serif;
-    }
-    header h1{
-      padding:0.5rem 1rem;
-    }
-    label{
-      font-size:1rem;
-      font-weight: bold;
-    }
-    input{
-      border: solid 1px #333;
-      font-size: 1rem;
-      padding: 0.75rem 1rem !important;
-      border-radius: 0.25rem;
-    }
-    input.error{
-      outline-color: var(--e_i);
-      outline-style: solid;
-      outline-width: 1px;
-    }
-    input:hover, input:focus{
-      outline-color: var(--p_bc);
-      outline-style: solid;
-      outline-width: 1px;
-    }
-
-    input.error:hover, input.error:focus{
-      outline-color: var(--e_i);
-    }
-
-    .hidden{
-      display:none;
-    }
-    button{
-      display: block;
-      box-sizing:border-box;
-      border:1px solid #333;
-      font-size: 1rem;
-      border-radius: 27px;
-      background-color: var(--p_bc);
-      color: var(--p_t);
-    }
-    main {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height:calc(100vh - 167px);
-    }
-    footer {
-        padding:1em;
-    }
-
-    .error{
-      color: var(--e_t);
-    }
-  </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/grid.css" />
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: 'Lato', Arial, sans-serif;
+        }
+        
+        header h1 {
+            padding: 0.5rem 1rem;
+        }
+        
+        label {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+        
+        input {
+            border: solid 1px #333;
+            font-size: 1rem;
+            padding: 0.75rem 1rem !important;
+            border-radius: 0.25rem;
+        }
+        
+        input.error {
+            outline-color: var(--e_i);
+            outline-style: solid;
+            outline-width: 1px;
+        }
+        
+        input:hover,
+        input:focus {
+            outline-color: var(--p_bc);
+            outline-style: solid;
+            outline-width: 1px;
+        }
+        
+        input.error:hover,
+        input.error:focus {
+            outline-color: var(--e_i);
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        button {
+            display: block;
+            box-sizing: border-box;
+            border: 1px solid #333;
+            font-size: 1rem;
+            border-radius: 27px;
+            background-color: var(--p_bc);
+            color: var(--p_t);
+            cursor: pointer;
+        }
+        
+        button:disabled {
+            background-color: #888;
+            cursor:not-allowed;
+        }
+        
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: calc(100vh - 167px);
+        }
+        
+        footer {
+            padding: 1em;
+        }
+        
+        .error {
+            color: var(--e_t);
+        }
+    </style>
 </head>
+
 <body>
-  <header >
-    <h1 contenteditable>Iniciar</h1>
-  </header>
-  <main class="container-xl ">
-    <form action="login.html " method="POST " class="grid depth-1 " id="formLogin">
-      <div class="col-12 col-m-6 offset-m-3 grid ">
-        <label for="txtEmail " class="col-12 ">Correo Electrónico</label>
-        <input class="col-12" type="email " name="txtEmail " id="txtEmail" placeholder="Correo Electrónico " />
-        <section  class="col-12 error hidden" id="txtEmailError"></section>
-      </div>
-      <div class="col-12 col-m-6 offset-m-3 grid ">
-        <label for="txtPassword " class="col-12 ">Contraseña</label>
-        <input class="col-12 "  type="password " name="txtPassword " id="txtPassword" placeholder="Contraseña " />
-      </div>
-       <div class="col-12 col-m-6 offset-m-3 grid ">
-        <label for="txtModulo " class="col-12 ">Módulo</label>
-        <select id="txtModulo " name="txtModulo ">
+    <header>
+        <h1 contenteditable>Iniciar</h1>
+    </header>
+    <main class="container-xl">
+        <form action="login.html" method="POST" class="grid depth-1" id="formLogin">
+            <div class="col-12 col-m-6 offset-m-3 grid">
+                <label for="txtEmail" class="col-12">Correo Electrónico</label>
+                <input class="col-12" type="email" name="txtEmail" id="txtEmail" placeholder="Correo Electrónico" />
+                <section class="col-12 error hidden" id="txtEmailError"></section>
+            </div>
+            <div class="col-12 col-m-6 offset-m-3 grid">
+                <label for="txtPassword" class="col-12">Contraseña</label>
+                <input class="col-12" type="password" name="txtPassword" id="txtPassword" placeholder="Contraseña" />
+                <section class="col-12 error hidden" id="txtPasswordError"></section>
+            </div>
+            <div class="col-12 col-m-6 offset-m-3 grid">
+                <label for="txtModulo" class="col-12">Módulo</label>
+                <select id="txtModulo" name="txtModulo">
           <option value="1">Inventario</option>
           <option value="2">Finanzas</option>
           <option value="3">Tienda</option>
           <option value="4">Compras</option>
         </select>
-      </div>
-      <div class="col-12 col-m-6 offset-m-3 grid ">
-        <button name="btnLogon " class="col-6 offset-3 depth-2 ">Iniciar Sesión</button>
-        <a href class="col-12 center ">Recuperar Contraseña</a>
-        <a href class="col-12 center ">Crear nueva cuenta</a>
-      </div>
-    </form>
-  </main>
-  <footer class="align-center-center ">
-    <section>Derechos Reservados</section>
-  </footer>
-  <script src="js/validateform.js"></script>
+            </div>
+            <div class="col-12 col-m-6 offset-m-3 grid">
+                <button name="btnLogon" id="btnLogon" class="col-6 offset-3 depth-2" disabled>Iniciar Sesión</button>
+                <a href class="col-12 center">Recuperar Contraseña</a>
+                <a href class="col-12 center">Crear nueva cuenta</a>
+            </div>
+        </form>
+    </main>
+    <footer class="align-center-center">
+        <section>Derechos Reservados</section>
+    </footer>
+    <script src="js/validateform.js"></script>
 </body>
+
 </html>
