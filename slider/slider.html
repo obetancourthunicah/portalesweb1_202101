@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider con Lazy Loading</title>
+    <link rel="stylesheet" href="css/slider.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Slider</h1>
+    </header>
+    <main>
+        <section class="slider">
+            <section class="slideLens">
+                <section class="slideTrail">
+                    <div class="slideFrame">
+                        <picture>
+                            <source srcset="imgs/s1_l.jpg" media="(min-width:1025px)" />
+                            <source srcset="imgs/s1_m.jpg" media="(min-width:640px") />
+                            <img alt="img1" src="imgs/s1_s.jpg" />
+                        </picture>
+                        <h2>Slide 1</h2>
+                    </div>
+                    <div class="slideFrame">
+                        <picture>
+                            <source data-srcset="imgs/s2_l.jpg" media="(min-width:1025px)" />
+                            <source data-srcset="imgs/s2_m.jpg" media="(min-width: 640px)" />
+                            <img alt="img1" data-src="imgs/s2_s.jpg" />
+                        </picture>
+                        <h2>Slide 2</h2>
+                    </div>
+                    <div class="slideFrame">
+                        <picture>
+                            <source data-srcset="imgs/s3_l.jpg" media="(min-width:1025px)" />
+                            <source data-srcset="imgs/s3_m.jpg" media="(min-width: 640px)" />
+                            <img alt="img1" data-src="imgs/s3_s.jpg" />
+                        </picture>
+                        <h2>Slide 3</h2>
+                    </div>
+                </section>
+            </section>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="js/slider.js"></script>
+</body>
+
+</html>
