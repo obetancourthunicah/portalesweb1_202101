@@ -35,8 +35,8 @@ footer{
   top:0;
   left:0px;
   display: flex;
-  width:300vw;
-  animation: sliderTrailProof 15s ease infinite;
+  transition: left 1s ease-in-out;
+  /*animation: sliderTrailProof 15s ease infinite;*/
 }
 
 .slideFrame{
